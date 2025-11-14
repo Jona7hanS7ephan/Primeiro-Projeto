@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olá Mundo!</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            max-width: 500px;
+            animation: fadeIn 0.8s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            color: #667eea;
+            font-size: 3em;
+            margin-bottom: 20px;
+            animation: bounce 1s ease-in-out;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        p {
+            color: #555;
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .emoji {
+            font-size: 4em;
+            margin-bottom: 20px;
+            display: inline-block;
+            animation: wave 2s ease-in-out infinite;
+        }
+
+        @keyframes wave {
+            0%, 100% {
+                transform: rotate(0deg);
+            }
+            25% {
+                transform: rotate(20deg);
+            }
+            75% {
+                transform: rotate(-20deg);
+            }
+        }
+
+        button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.1em;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        .info {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .highlight {
+            color: #667eea;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="emoji">👋</div>
+        <h1>Olá Mundo!</h1>
+        <p>Bem-vindo ao seu primeiro projeto HTML!</p>
+        <p>Este é um exemplo simples de uma página web com HTML, CSS e JavaScript.</p>
+        
+        <button onclick="mostrarMensagem()">Clique Aqui!</button>
+        
+        <div class="info">
+            <p>
+                <span class="highlight">HTML</span> - Estrutura da página<br>
+                <span class="highlight">CSS</span> - Estilização e design<br>
+                <span class="highlight">JavaScript</span> - Interatividade
+            </p>
+        </div>
+    </div>
+
+    <script>
+        function mostrarMensagem() {
+            const mensagens = [
+                '🎉 Parabéns! Você está programando!',
+                '🚀 Continue aprendendo, você está indo bem!',
+                '💡 A prática leva à perfeição!',
+                '⭐ Você é incrível!',
+                '🎨 Criatividade é o limite!'
+            ];
+            
+            const mensagemAleatoria = mensagens[Math.floor(Math.random() * mensagens.length)];
+            alert(mensagemAleatoria);
+        }
+
+        // Adiciona um efeito ao carregar a página
+        window.addEventListener('load', function() {
+            console.log('🎉 Página carregada com sucesso!');
+            console.log('💻 Bem-vindo ao mundo da programação web!');
+        });
+    </script>
+</body>
+</html>
